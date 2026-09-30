@@ -1,10 +1,10 @@
 const bookPainel = document.querySelector("div.book-painel")
 
 const statusColor = {
-  unread: "#FECACA",  
-  reading: "#FDE68A", 
-  read: "#BBF7D0",    
-};
+	unread: "#FECACA",
+	reading: "#FDE68A",
+	read: "#BBF7D0",
+}
 
 export default function addBook(newBook, library) {
 	// create book div
@@ -39,15 +39,18 @@ export default function addBook(newBook, library) {
 	bookDiv.append(bookDivH1)
 
 	// book author <p>
-	const bookDivH2 = document.createElement("p")
+	const bookDivP = document.createElement("p")
 
-	Object.assign(bookDivH2.style, {
+	Object.assign(bookDivP.style, {
 		margin: "0 0.5rem",
+		whiteSpace: "nowrap",
+		overflow: "hidden",
+		textOverflow: "ellipsis",
 	})
 
-	bookDivH2.textContent = `by ${newBook.bookAuthor}`
+	bookDivP.textContent = `by ${newBook.bookAuthor}`
 
-	bookDiv.append(bookDivH2)
+	bookDiv.append(bookDivP)
 
 	// change status button
 	const changeStatusBtn = document.createElement("button")
@@ -102,9 +105,8 @@ export default function addBook(newBook, library) {
 		marginTop: "auto",
 		cursor: "pointer",
 		borderRadius: "5px",
-		transition: "background-color 0.2s ease", 
+		transition: "background-color 0.2s ease",
 	})
-
 
 	changeStatusBtn.addEventListener("mouseenter", (event) => {
 		event.currentTarget.style.backgroundColor = "#059669"

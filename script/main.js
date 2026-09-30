@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			!radioBookChecked
 		) {
 			// erro
-			console.log("Nem todos os dados foram preenchidos, parando execução...")
+			console.log("erro main.js (input check if)")
 			return
 		}
 
