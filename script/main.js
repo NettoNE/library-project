@@ -4,7 +4,10 @@ import addBook from "./addBook.js"
 const btnAddBook = document.querySelector("#btnAddBook")
 
 // obj arr
-const library = []
+const library = [];
+
+// console debug stuff  
+window.library = library;
 
 // DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
