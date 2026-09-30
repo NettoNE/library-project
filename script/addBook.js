@@ -1,9 +1,9 @@
 const bookPainel = document.querySelector("div.book-painel")
 
 const statusColor = {
-  unread: "#FECACA",  // vermelho suave
-  reading: "#FDE68A", // amarelo suave
-  read: "#BBF7D0",    // verde suave
+  unread: "#FECACA",  
+  reading: "#FDE68A", 
+  read: "#BBF7D0",    
 };
 
 export default function addBook(newBook, library) {
